@@ -20,6 +20,13 @@ func startRepl() {
 
 		cleanText := cleanInput(text)
 
+		command := cleanText[0]
+		switch command {
+		case "exit":
+			os.Exit(0)
+
+		}
+
 		if len(cleanText) == 0 {
 			fmt.Println()
 			continue
