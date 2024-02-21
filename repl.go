@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
 )
 
 func startRepl() {
@@ -21,4 +22,12 @@ func startRepl() {
 
 	}
 
+}
+
+func cleanInput(str string) []string {
+	lowered := strings.ToLower(str)
+
+	word := strings.Fields(lowered)
+
+	return word
 }
